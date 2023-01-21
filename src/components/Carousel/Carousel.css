@@ -1,0 +1,90 @@
+/** @format */
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+.App {
+  width: 80%;
+
+  margin: 0 auto;
+  position: relative;
+  padding: 30px 0px;
+}
+.slide img {
+  margin: 0 auto;
+  position: absolute;
+  width: 450px;
+  height: 550px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid black;
+  background-size: contain;
+
+  background-repeat: no-repeat;
+}
+
+.slide {
+  border: 1px solid black;
+  width: 450px;
+  height: 550px;
+  position: relative;
+  display: flex;
+  background-repeat: no-repeat;
+  transform: scale(0.6);
+  transition: transform 300ms;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.activeSlide {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 10;
+  background-size: cover;
+}
+
+.arrow {
+  background-color: transparent;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.next,
+.prev {
+  top: 50%;
+  font-size: 25px;
+  color: rgba(0, 185, 255, 1);
+  transition: 0.2s;
+  font-weight: bold;
+  z-index: 1;
+}
+.next {
+  right: -6%;
+}
+.prev {
+  left: -6%;
+}
+@media (min-width: 768px) {
+  .prev {
+    left: 0%;
+  }
+  .next {
+    right: 0%;
+  }
+}
+p {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 30px;
+  color: white;
+}
+.prev:hover {
+  transform: scale(1.08);
+}
+.next:hover {
+  transform: scale(1.08);
+}
+
+/* @import 'swiper/css/swiper.css'; */
