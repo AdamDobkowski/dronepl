@@ -46,7 +46,7 @@ const ClipUpOne = styled.div`
   clip-path: polygon(0 0, 100% 0, 93% 1.9%, 7.6% 1.9%);
   @media (min-width: 768px) {
     width: 80%;
-    clip-path: polygon(0 0, 100% 0, 93% 3.5%, 7.6% 3.5%);
+    clip-path: polygon(0 0, 100% 0, 93% 4.2%, 7.6% 4.3%);
   }
 `;
 const ClipUp = styled.div`

@@ -79,6 +79,7 @@ const Imgi = styled.div`
 `;
 
 const CompanyCarousel = () => {
+  // eslint-disable-next-line
   let swiper = new Swiper('.swiper', {
     spaceBetween: 10,
     centeredSlides: true,

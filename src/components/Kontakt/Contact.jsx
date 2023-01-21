@@ -160,6 +160,7 @@ const ClipDown = styled.p`
 `;
 
 const Contact = () => {
+  // eslint-disable-next-line
   const [result, showResult] = useState(false);
   const form = useRef();
   const sendEmail = e => {
