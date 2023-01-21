@@ -5,29 +5,21 @@ import styled from 'styled-components';
 import { BsFillTelephonePlusFill } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 import emailjs from '@emailjs/browser';
-import { Form } from 'react-router-dom';
 
 const ContainerContact = styled.div`
   position: relative;
   height: 100vh;
+  width: 100%;
   padding: 0;
   margin: 0;
-  /* border: 1px solid red; */
-  /* width: 100%; */
   font-family: Montserrat;
 `;
 const ContainerInfo = styled.div`
   div {
-    /* border: 1px solid yellow; */
     position: relative;
     font-family: Montserrat;
     font-size: 18px;
-    /* top: 50%; */
-    /* left: 50%; */
     text-align: center;
-    /* transform: translate(-50%, 35%); */
-    /* margin: 30px auto; */
-    /* color: black; */
     color: white;
   }
 `;
@@ -37,25 +29,30 @@ const WrapContainer = styled.div`
   position: absolute;
   width: 80%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
+  gap: 20px;
   margin: 0 auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -70%);
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
 `;
 const NumberContainer = styled.div`
   display: flex;
-  border: 1px solid yellow;
-  /* position: absolute; */
   flex-direction: column;
   gap: 10px;
   div {
     display: flex;
     gap: 10px;
-    /* justify-content: center; */
     align-items: center;
     font-size: 18px;
   }
@@ -63,9 +60,12 @@ const NumberContainer = styled.div`
 const FormContact = styled.form`
   display: flex;
   flex-direction: column;
-  width: 40%;
-  /* max-width: 500px; */
-  margin: 0 auto;
+  width: 100%;
+  /* margin: 0 auto; */
+
+  @media (min-width: 768px) {
+    width: 40%;
+  }
 `;
 const InputForm = styled.input`
   height: 45px;
@@ -162,10 +162,8 @@ const ClipDown = styled.p`
 const Contact = () => {
   const [result, showResult] = useState(false);
   const form = useRef();
-
   const sendEmail = e => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         'service_tp554uu',
@@ -176,10 +174,10 @@ const Contact = () => {
       )
       .then(
         result => {
-          console.log(result.text);
+          // console.log(result.text);
         },
         error => {
-          console.log(error.text);
+          // console.log(error.text);
         },
       );
     e.target.reset(showResult(true));

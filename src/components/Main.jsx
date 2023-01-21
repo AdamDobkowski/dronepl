@@ -20,24 +20,12 @@ const Section = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
   font-family: Montserrat;
-  /* width: 70%; */
   @media (min-width: 768px) {
-    /* height: 100vh; */
     width: 100%;
   }
 `;
-// const SectionTwo = styled.div`
-//   height: 100vh;
-//   position: relative;
-//   width: 100%;
-//   background-color: rgba(0, 0, 0, 0.05);
-//   @media (min-width: 768px) {
-//     height: 100vh;
-//   }
-// `;
 
 const SectionThree = styled.div`
-  /* height: 100%; */
   position: relative;
   width: 100vh;
   width: 100%;
@@ -46,7 +34,6 @@ const SectionThree = styled.div`
 `;
 
 const ClipUpOne = styled.div`
-  /* z-index: -999; */
   height: 100%;
   margin: 0 auto;
   top: 50%;
@@ -56,15 +43,13 @@ const ClipUpOne = styled.div`
   width: 100%;
   background-color: rgb(0, 185, 255);
 
-  /* clip-path: polygon(0 0, 100% 0, 93% 4.8%, 7.6% 4.8%); */
   clip-path: polygon(0 0, 100% 0, 93% 1.9%, 7.6% 1.9%);
   @media (min-width: 768px) {
     width: 80%;
-    clip-path: polygon(0 0, 100% 0, 93% 6.5%, 7.6% 6.5%);
+    clip-path: polygon(0 0, 100% 0, 93% 3.5%, 7.6% 3.5%);
   }
 `;
 const ClipUp = styled.div`
-  /* z-index: -999; */
   height: 100%;
   margin: 0 auto;
   top: 50%;
@@ -73,8 +58,6 @@ const ClipUp = styled.div`
   position: absolute;
   width: 100%;
   background-color: rgb(0, 185, 255);
-
-  /* clip-path: polygon(0 0, 100% 0, 93% 4.8%, 7.6% 4.8%); */
   clip-path: polygon(0 0, 100% 0, 93% 4.8%, 7.6% 4.8%);
   @media (min-width: 768px) {
     width: 80%;
@@ -109,20 +92,6 @@ const ClipDown = styled.p`
     clip-path: polygon(4.4% 96.8%, 95.6% 96.8%, 100% 100%, 0% 100%);
   }
 `;
-// const ClipDownThree = styled.p`
-//   position: absolute;
-//   margin: 0 auto;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   height: 100%;
-//   width: 100%;
-//   background-color: rgb(0, 185, 255);
-//   clip-path: polygon(7.6% 96.8%, 92.4% 96.8%, 100% 100%, 0% 100%);
-//   @media (min-width: 660px) {
-//     clip-path: polygon(4.4% 94.8%, 95.6% 94.8%, 100% 100%, 0% 100%);
-//   }
-// `;
 const ContainerInfo = styled.div`
   position: relative;
   display: flex;
@@ -238,7 +207,6 @@ const ContainerTxt = styled.div`
     position: relative;
     height: 200px;
     top: -20px;
-    /* width: 35%; */
 
     p {
       position: relative;
@@ -254,7 +222,7 @@ const ContainerTxt = styled.div`
     }
     button {
       position: relative;
-      top: 60%;
+      top: 70%;
       left: 50%;
       transform: translate(-50%, -100%);
       background-color: rgb(0, 0, 5, 0.18);
@@ -554,8 +522,7 @@ const Main = ({ open, current }) => {
     <>
       <main>
         <Hero open={open} />
-        <Section>
-          <a id='About' />
+        <Section id='About'>
           <ClipUpOne />
           <WrapperSection>
             <motion.div
@@ -621,8 +588,7 @@ const Main = ({ open, current }) => {
           <ClipDownOne />
         </Section>
         <Counter jp={pxl} />
-        <SectionThree>
-          <a id='Works' />
+        <SectionThree id='Works'>
           <ClipUp />
           <WrapperSection ref={scrollRef}>
             <motion.div
@@ -663,7 +629,7 @@ const Main = ({ open, current }) => {
           <ClipDown />
         </SectionThree>
         <Section>
-          <a id='Kontakt' />
+          <AnchorLink id='Kontakt' />
           <Contact />
         </Section>
       </main>

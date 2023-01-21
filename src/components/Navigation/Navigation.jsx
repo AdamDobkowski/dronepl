@@ -14,32 +14,16 @@ import {
   Facebook,
   Instagram,
   Youtube,
-  Tiktok,
-  Linking,
 } from './Navigation.style';
-// import Hero from '../Hero/Hero';
-// import Hero from '..//Hero/Hero';
-// import About from '../About/About';
 
 const Navigation = ({ open, handlerOpen, coloricons, changeIconColor }) => {
-  // const [colorIcons, isColorIcons] = useState(false);
-  // const changeIconColor = () => {
-  //   if (window.scrollY >= 80) {
-  //     isColorIcons(true);
-  //     console.log(window.scrollY);
-  //   } else {
-  //     isColorIcons(false);
-  //   }
-  // };
   window.addEventListener('scroll', changeIconColor);
-  console.log(coloricons);
   return (
     <>
       <OutWrapper isMobilie>
         <AnchorLink href='#Hero'>
           <LogoContainer isSmall open={open} />
         </AnchorLink>
-
         <Wrapper open={open}>
           <AnchorLink href='#Hero'>
             <LogoContainer isMobileOpen open={!open} />
@@ -61,32 +45,31 @@ const Navigation = ({ open, handlerOpen, coloricons, changeIconColor }) => {
               </AnchorLink>
             </ListItem>
           </UnorderList>
-          <SocialMedia style={{ overflowY: 'scroll' }}>
+          <SocialMedia style={{ overflowY: 'scroll' }} coloricons={coloricons}>
             <a
               onClick={handlerOpen}
               href='https://www.facebook.com/Mr.DroneUslugiDronem'
               target='_blank'
+              rel='noopener noreferrer'
             >
-              <Facebook coloricons={coloricons} />
+              <Facebook />
             </a>
             <a
               onClick={handlerOpen}
               href='https://www.instagram.com/mrdronepl/'
               target='_blank'
+              rel='noopener noreferrer'
             >
-              <Instagram coloricons={coloricons} />
+              <Instagram />
             </a>
             <a
               onClick={handlerOpen}
               href='https://www.youtube.com/@user-xb4xp2gy6w/featured'
               target='_blank'
+              rel='noopener noreferrer'
             >
-              <Youtube coloricons={coloricons} />
+              <Youtube />
             </a>
-            {/* </Link> */}
-            {/* <Link to='/'> */}
-            {/* <Tiktok coloricons={coloricons} /> */}
-            {/* </Link> */}
           </SocialMedia>
         </Wrapper>
         <Hamb open={open} onClick={handlerOpen}>
@@ -95,8 +78,6 @@ const Navigation = ({ open, handlerOpen, coloricons, changeIconColor }) => {
           <div></div>
         </Hamb>
       </OutWrapper>
-      {/* <Hero open={open} /> */}
-      {/* <About open={open} /> */}
     </>
   );
 };

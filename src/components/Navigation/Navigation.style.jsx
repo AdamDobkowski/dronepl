@@ -1,17 +1,13 @@
 /** @format */
 
 import styled from 'styled-components';
-import { FaFacebook } from 'react-icons/fa';
-import { FaInstagram } from 'react-icons/fa';
-import { SiTiktok } from 'react-icons/si';
-import { FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+
 import Logoz from '../../assets/imges/Logo/logoz.png';
-// import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export const OutWrapper = styled.div`
   position: fixed;
-  /* padding: 20px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,9 +36,8 @@ export const Wrapper = styled.div`
   align-items: center;
   background: white;
   justify-content: space-around;
-  /* z-index: 1000; */
+
   @media (min-width: 768px) {
-    /* padding: 10px; */
     width: 100%;
     height: 80px;
     position: static;
@@ -52,8 +47,6 @@ export const Wrapper = styled.div`
     align-items: center;
     justify-content: space-around;
     background-color: rgba(0 0 0 / 60%);
-    /* background-color: rgba(0, 130, 200, 0.3); */
-    /* filter: blur(2px); */
   }
 `;
 
@@ -73,7 +66,6 @@ export const LogoContainer = styled.div`
 `;
 export const UnorderList = styled.ul`
   z-index: 1000;
-  /* height: 100%; */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -100,7 +92,6 @@ export const UnorderList = styled.ul`
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    /* background-color: red; */
   }
 `;
 
@@ -122,10 +113,7 @@ export const ListItem = styled.li`
     justify-items: center;
     @media (min-width: 768px) {
       color: ${({ theme }) => theme.colors.white};
-      /* color: transparent; */
       transition: text-shadow 0.2s ease;
-
-      /* font-size: ${({ theme }) => theme.font.size.xxs}; */
       &:hover {
         text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white;
       }
@@ -150,13 +138,11 @@ export const SocialMedia = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* color: ${({ coloricons }) => (coloricons ? 'red' : 'blue')}; */
-    /* color: red; */
-    /* background-color: ${({ coloricons }) =>
-      coloricons ? 'red' : 'blue'}; */
-
+    color: ${({ coloricons }) => (coloricons ? 'rgba(0, 130, 200)' : 'white')};
     a {
       padding: 5px;
+      color: ${({ coloricons }) =>
+        coloricons ? 'rgba(0, 130, 200)' : 'white'};
     }
   }
 `;
@@ -164,7 +150,6 @@ export const Facebook = styled(FaFacebook)`
   font-size: 2rem;
   color: black;
   @media (min-width: 768px) {
-    /* color: ${({ coloricons }) => (coloricons ? 'black' : 'white')}; */
     color: ${({ coloricons }) => (coloricons ? 'rgba(0, 130, 200)' : 'white')};
     font-size: 2.2rem;
     transition: color 0.4s ease;
@@ -179,22 +164,7 @@ export const Instagram = styled(FaInstagram)`
   font-size: 2.1rem;
   @media (min-width: 768px) {
     color: ${({ coloricons }) => (coloricons ? 'rgba(0, 130, 200)' : 'white')};
-
     font-size: 2.3rem;
-    transition: color 0.4s ease;
-    :hover {
-      color: silver;
-    }
-  }
-`;
-export const Tiktok = styled(SiTiktok)`
-  color: black;
-  font-size: 2rem;
-  @media (min-width: 768px) {
-    /* color: ${({ coloricons }) => (coloricons ? 'black' : 'white')}; */
-    color: ${({ coloricons }) => (coloricons ? 'rgba(0, 130, 200)' : 'white')};
-
-    font-size: 2.4rem;
     transition: color 0.4s ease;
     :hover {
       color: silver;
@@ -205,9 +175,7 @@ export const Youtube = styled(FaYoutube)`
   color: black;
   font-size: 2.1rem;
   @media (min-width: 768px) {
-    /* color: ${({ coloricons }) => (coloricons ? 'black' : 'white')}; */
     color: ${({ coloricons }) => (coloricons ? 'rgba(0, 130, 200)' : 'white')};
-
     font-size: 2.6rem;
     transition: color 0.4s ease;
     :hover {

@@ -3,12 +3,11 @@
 // /** @format */
 
 import React, { useState } from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import styled from 'styled-components';
 import video from '../../assets/imges/dron.mp4';
 import imgHero from '../../assets/imges/hero.jpg';
-// import Navigation from '../Navigation/Navigation';
-// import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const HeroContainer = styled.div`
@@ -117,10 +116,8 @@ const ContainerView = styled.div`
     height: 100%;
     object-fit: cover;
     visibility: ${({ changeHero }) => (changeHero ? 'hidden' : 'visible')};
-    /* display: initial; */
   }
   img {
-    /* visibility: hidden; */
     position: absolute;
     width: 100%;
     height: 100%;
@@ -134,8 +131,7 @@ const Hero = () => {
   const changeBG = () => isChangeImg(!changeHero);
 
   return (
-    <HeroContainer>
-      <a id='Hero' />
+    <HeroContainer id='Hero'>
       <ContainerView>
         <video src={video} autoPlay loop muted alt='hero' />
       </ContainerView>
@@ -146,7 +142,6 @@ const Hero = () => {
         <HeroInfo>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            // animate={{ opacity: 1, scale: 1 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -159,19 +154,16 @@ const Hero = () => {
             <h5>filmy oraz fotografia</h5>
           </motion.div>
         </HeroInfo>
-        {/* <h2>play my showreel</h2> */}
         <ContainerLinks>
           <Button1
             as={motion.button}
             onClick={changeBG}
             initial={{ opacity: 0, x: -30 }}
-            // animate={{ opacity: 1, scale: 1 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span>{!changeHero ? 'SHOWREEL' : 'OFFshowreel'}</span>
-            {/* </motion.div> */}
+            <span>{!changeHero ? 'PLAY' : 'OFF'}</span>
           </Button1>
           <Button2
             as={motion.button}
@@ -182,7 +174,7 @@ const Hero = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <a href='#Kontakt'>SKONTAKTUJ SIĘ</a>
+            <AnchorLink href='#Kontakt'>SKONTAKTUJ SIĘ</AnchorLink>
           </Button2>
         </ContainerLinks>
       </ContainerButton>
