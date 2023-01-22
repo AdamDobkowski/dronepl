@@ -26,7 +26,7 @@ const ContainerInfo = styled.div`
 const WrapContainer = styled.div`
   text-align: center;
   font-family: Montserrat;
-  position: absolute;
+  position: relative;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@ const WrapContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -70%);
@@ -47,6 +47,7 @@ const WrapContainer = styled.div`
   }
 `;
 const NumberContainer = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -58,6 +59,7 @@ const NumberContainer = styled.div`
   }
 `;
 const FormContact = styled.form`
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;

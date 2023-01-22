@@ -628,8 +628,7 @@ const Main = ({ open, current }) => {
           <CompanyCarousel />
           <ClipDown />
         </SectionThree>
-        <Section>
-          <AnchorLink id='Kontakt' />
+        <Section id='Kontakt'>
           <Contact />
         </Section>
       </main>

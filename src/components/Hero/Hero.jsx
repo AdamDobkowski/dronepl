@@ -137,7 +137,15 @@ const Hero = () => {
     // eslint-disable-next-line
     <HeroContainer id='Hero'>
       <ContainerView>
-        <video src={video} autoPlay loop muted alt='hero' />
+        <video
+          src={video}
+          controls='true'
+          playsinline
+          autoPlay
+          loop
+          muted
+          alt='hero'
+        />
       </ContainerView>
       <ContainerView changeHero={changeHero}>
         <img src={imgHero} alt='hero' />
