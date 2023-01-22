@@ -60,17 +60,17 @@
   z-index: 1;
 }
 .next {
-  right: -6%;
+  right: -7%;
 }
 .prev {
-  left: -6%;
+  left: -7%;
 }
 @media (min-width: 768px) {
   .prev {
-    left: 0%;
+    left: -5%;
   }
   .next {
-    right: 0%;
+    right: -5%;
   }
 }
 p {

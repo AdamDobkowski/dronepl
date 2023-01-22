@@ -15,8 +15,8 @@ const ContainerSlider = styled.div`
   background: transparent;*/
   /* background: transparent; */
   position: relative;
-  height: 200px;
-  width: 80%;
+  height: 250px;
+  max-width: 80%;
   z-index: -1;
 
   /* height: 30%; */
@@ -36,11 +36,10 @@ const StyledSlider = styled.div`
   /* height: 100px; */
 `;
 const Imgi = styled.div`
-  /* border: 1px solid red; */
   position: relative;
   padding: 0;
   margin: 0 auto;
-  width: 90%;
+  width: 95%;
 
   /*  */
   display: -webkit-box;
@@ -57,23 +56,20 @@ const Imgi = styled.div`
   align-items: center;
   /*  */
 
-  /* transform: translate(-50%, -50%); */
   img {
-    /* border: 1px solid yellow; */
     position: relative;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
+
     z-index: 999;
     margin: 0 auto;
-    width: 35%;
-    /* height: 100px; */
+    width: 70%;
     background-size: cover;
+    @media (min-width: 500px) {
+      width: 80%;
+    }
     @media (min-width: 768px) {
       background-size: contain;
+      width: 40%;
       background-repeat: no-repeat;
-      /* width: auto; */
-      /* height: 200px; */
     }
   }
 `;

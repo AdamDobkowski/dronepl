@@ -26,8 +26,11 @@ const ContainerButton = styled.div`
   align-items: center;
   flex-direction: column;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
-  height: 100%;
+  height: inherit;
 `;
 const HeroInfo = styled.div`
   position: absolute;
@@ -131,6 +134,7 @@ const Hero = () => {
   const changeBG = () => isChangeImg(!changeHero);
 
   return (
+    // eslint-disable-next-line
     <HeroContainer id='Hero'>
       <ContainerView>
         <video src={video} autoPlay loop muted alt='hero' />
@@ -138,6 +142,7 @@ const Hero = () => {
       <ContainerView changeHero={changeHero}>
         <img src={imgHero} alt='hero' />
       </ContainerView>
+
       <ContainerButton>
         <HeroInfo>
           <motion.div

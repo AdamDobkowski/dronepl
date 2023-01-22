@@ -42,6 +42,23 @@ const Carousel = () => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     beforeChange: (current, next) => setImageIndex(next),
+    responsive: [
+      {
+        breakpoint: 700,
+        settings: {
+          adaptiveHeight: false,
+          infinite: true,
+          lazyLoad: true,
+          speed: 300,
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: 0,
+          nextArrow: <NextArrow />,
+          prevArrow: <PrevArrow />,
+          beforeChange: (current, next) => setImageIndex(next),
+        },
+      },
+    ],
   };
   return (
     <>

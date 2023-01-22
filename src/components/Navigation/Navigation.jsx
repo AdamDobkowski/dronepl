@@ -40,7 +40,7 @@ const Navigation = ({ open, handlerOpen, coloricons, changeIconColor }) => {
               </AnchorLink>
             </ListItem>
             <ListItem>
-              <AnchorLink offset='80' href='#Kontakt'>
+              <AnchorLink offset='80' href='#Kontakt' onClick={handlerOpen}>
                 Kontakt
               </AnchorLink>
             </ListItem>
