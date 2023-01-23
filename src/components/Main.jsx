@@ -34,10 +34,17 @@ const SectionThree = styled.div`
 `;
 const SectionParalax = styled.div`
   position: relative;
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   font-family: Montserrat;
   background-color: rgba(0, 0, 0, 0.2);
+`;
+const SectionContact = styled.div`
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  font-family: Montserrat;
+  background-color: transparent;
 `;
 
 const ClipUpOne = styled.div`
@@ -641,9 +648,9 @@ const Main = ({ open, current }) => {
           <CompanyCarousel />
           <ClipDown />
         </SectionThree>
-        {/* <SectionContact id='Kontakt'> */}
-        <Contact />
-        {/* </SectionContact> */}
+        <SectionContact id='Kontakt'>
+          <Contact />
+        </SectionContact>
       </main>
     </>
   );

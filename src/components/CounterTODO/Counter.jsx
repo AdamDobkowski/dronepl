@@ -13,25 +13,26 @@ import pxl from '../../assets/imges/prlx.jpeg';
 
 const NumbersDo = styled.div`
   position: relative;
-  height: 50vh;
+  height: 60vh;
   width: 100%;
 `;
 const Numbers = styled.div`
+  height: 100%;
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  padding: 15px;
   gap: 30px;
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    /* align-items: flex-start; */
-    top: 50%;
+    align-items: center;
+    /* top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     /* height: 30%; */
     gap: 0px;
   }
@@ -55,7 +56,7 @@ const Info = styled.div`
   font-family: Montserrat;
   position: relative;
   font-size: ${({ theme }) => theme.font.size.xs};
-  color: white;
+  color: black;
 `;
 
 const DeliveryDrone = styled(RiTimeFill)`
@@ -75,7 +76,7 @@ const VideoRecording = styled(RiMovieFill)`
 `;
 
 const Wrapper = styled.div`
-  height: 50vh;
+  height: 60vh;
   position: relative;
   font-family: Montserrat;
 `;
@@ -138,7 +139,11 @@ const Counter = () => {
                 ),
               },
             ]}
-            style={{ aspectRatio: 'auto', height: '50vh' }}
+            style={{
+              aspectRatio: 'auto',
+              height: '60vh',
+              position: 'relative',
+            }}
           ></ParallaxBanner>
         </ParallaxProvider>
       </Wrapper>

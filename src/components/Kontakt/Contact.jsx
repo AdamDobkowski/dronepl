@@ -12,10 +12,7 @@ const ContainerContact = styled.div`
   width: 100%;
   padding: 0;
   margin: 0;
-  /* font-family: Montserrat; */
   position: relative;
-  /* height: 100vh; */
-  width: 100%;
   font-family: Montserrat;
   background-color: rgba(0, 0, 0, 0.2);
 `;
@@ -33,24 +30,23 @@ const WrapContainer = styled.div`
   text-align: center;
   font-family: Montserrat;
   position: relative;
-  width: 80%;
-  /* height: 100%; */
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  padding: 20px;
-  /* margin: 0 auto; */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -55%);
   @media (min-width: 768px) {
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -67%);
+    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
     flex-direction: row;
   }
 `;
@@ -58,7 +54,9 @@ const NumberContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
+  height: 50%;
+  width: 50%;
   div {
     display: flex;
     gap: 10px;
@@ -70,10 +68,10 @@ const FormContact = styled.form`
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  /* margin: 0 auto; */
-
+  width: 50%;
+  height: 50%;
   @media (min-width: 768px) {
+    position: relative;
     width: 40%;
   }
 `;
@@ -195,6 +193,7 @@ const Contact = () => {
   };
 
   return (
+    // eslint-disable-next-line
     <ContainerContact>
       <ClipUp />
       <ContainerInfo>
