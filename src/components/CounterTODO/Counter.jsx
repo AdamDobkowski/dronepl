@@ -12,7 +12,7 @@ import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax';
 import pxl from '../../assets/imges/prlx.jpeg';
 
 const NumbersDo = styled.div`
-  height: 100vh;
+  height: 50vh;
   width: 100%;
 `;
 const Numbers = styled.div`
@@ -26,9 +26,13 @@ const Numbers = styled.div`
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
-    height: 30%;
+    justify-content: space-around;
+    /* align-items: flex-start; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* height: 30%; */
     gap: 0px;
-    align-items: flex-end;
   }
 `;
 const NumbersContainer = styled.div`
@@ -92,7 +96,7 @@ const Counter = () => {
 
               {
                 children: (
-                  <div>
+                  <>
                     <NumbersDo>
                       <Numbers>
                         <NumbersContainer>
@@ -124,7 +128,7 @@ const Counter = () => {
                         </NumbersContainer>
                       </Numbers>
                     </NumbersDo>
-                  </div>
+                  </>
                 ),
               },
             ]}

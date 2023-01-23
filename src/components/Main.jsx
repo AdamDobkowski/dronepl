@@ -32,6 +32,13 @@ const SectionThree = styled.div`
   font-family: Montserrat;
   background-color: rgba(0, 0, 0, 0.2);
 `;
+const SectionContact = styled.div`
+  position: relative;
+  width: 100vh;
+  width: 100%;
+  font-family: Montserrat;
+  background-color: rgba(0, 0, 0, 0.2);
+`;
 
 const ClipUpOne = styled.div`
   height: 100%;
@@ -628,9 +635,9 @@ const Main = ({ open, current }) => {
           <CompanyCarousel />
           <ClipDown />
         </SectionThree>
-        <Section id='Kontakt'>
+        <SectionContact id='Kontakt'>
           <Contact />
-        </Section>
+        </SectionContact>
       </main>
     </>
   );

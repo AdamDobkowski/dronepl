@@ -21,6 +21,7 @@ const ContainerInfo = styled.div`
     font-size: 18px;
     text-align: center;
     color: white;
+    top: 10px;
   }
 `;
 const WrapContainer = styled.div`
@@ -28,16 +29,18 @@ const WrapContainer = styled.div`
   font-family: Montserrat;
   position: relative;
   width: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  padding: 20px;
   /* margin: 0 auto; */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -70%);
+  transform: translate(-50%, -65%);
   @media (min-width: 768px) {
     display: flex;
     justify-content: center;

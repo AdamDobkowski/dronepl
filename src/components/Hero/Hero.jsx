@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 
 const HeroContainer = styled.div`
   font-family: Montserrat;
-
+  position: relative;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -47,7 +47,6 @@ const HeroInfo = styled.div`
     font-size: clamp(1.5rem, 5vw, 3rem);
     margin: 0;
     text-shadow: 4px 4px 30px rgba(255, 255, 255, 0.3);
-
     color: ${({ theme }) => theme.colors.white};
     letter-spacing: 3px;
   }
@@ -57,7 +56,6 @@ const HeroInfo = styled.div`
     font-size: clamp(1.2rem, 5vw, 1.5rem);
     margin: 0 0 25px 0;
     text-shadow: 4px 4px 30px rgba(255, 255, 255, 02.3rem);
-
     color: ${({ theme }) => theme.colors.white};
     letter-spacing: 3px;
   }
@@ -66,10 +64,10 @@ const ContainerLinks = styled.div`
   display: flex;
   flex-direction: row;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   margin-right: -50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 100%);
 `;
 
 const Button1 = styled.button`
@@ -110,18 +108,21 @@ const Button2 = styled.button`
 `;
 
 const ContainerView = styled.div`
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
-  z-index: -10;
+  /* z-index: -10; */
   video {
+    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
     visibility: ${({ changeHero }) => (changeHero ? 'hidden' : 'visible')};
   }
   img {
-    position: absolute;
+    /* z-index: 1; */
+    position: relative;
+    top: -100%;
     width: 100%;
     height: 100%;
     object-fit: cover;

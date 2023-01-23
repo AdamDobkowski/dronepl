@@ -30,17 +30,17 @@ const Navigation = ({ open, handlerOpen, coloricons, changeIconColor }) => {
           </AnchorLink>
           <UnorderList>
             <ListItem>
-              <AnchorLink href='#About' onClick={handlerOpen}>
+              <AnchorLink offset='80' href='#About' onClick={handlerOpen}>
                 Realizujemy
               </AnchorLink>
             </ListItem>
             <ListItem>
-              <AnchorLink href='#Works' onClick={handlerOpen}>
+              <AnchorLink offset='80' href='#Works' onClick={handlerOpen}>
                 Zrealizowaliśmy
               </AnchorLink>
             </ListItem>
             <ListItem>
-              <AnchorLink href='#Kontakt' onClick={handlerOpen}>
+              <AnchorLink offset='80' href='#Kontakt' onClick={handlerOpen}>
                 Kontakt
               </AnchorLink>
             </ListItem>
