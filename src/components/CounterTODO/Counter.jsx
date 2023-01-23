@@ -12,6 +12,7 @@ import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax';
 import pxl from '../../assets/imges/prlx.jpeg';
 
 const NumbersDo = styled.div`
+  position: relative;
   height: 50vh;
   width: 100%;
 `;
@@ -37,12 +38,14 @@ const Numbers = styled.div`
 `;
 const NumbersContainer = styled.div`
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: Montserrat sans-serif;
 `;
 const Counts = styled.div`
+  position: relative;
   font-size: ${({ theme }) => theme.font.size.s};
   font-weight: bold;
   color: white;
@@ -50,20 +53,23 @@ const Counts = styled.div`
 `;
 const Info = styled.div`
   font-family: Montserrat;
-
+  position: relative;
   font-size: ${({ theme }) => theme.font.size.xs};
   color: white;
 `;
 
 const DeliveryDrone = styled(RiTimeFill)`
+  position: relative;
   font-size: 60px;
   color: DodgerBlue;
 `;
 const PhotoCamera = styled(MdPhotoCamera)`
   font-size: 60px;
   color: DodgerBlue;
+  position: relative;
 `;
 const VideoRecording = styled(RiMovieFill)`
+  position: relative;
   font-size: 60px;
   color: DodgerBlue;
 `;

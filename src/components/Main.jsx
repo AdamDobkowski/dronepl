@@ -27,18 +27,18 @@ const Section = styled.div`
 
 const SectionThree = styled.div`
   position: relative;
-  width: 100vh;
+  height: 100%;
   width: 100%;
   font-family: Montserrat;
   background-color: rgba(0, 0, 0, 0.2);
 `;
-const SectionContact = styled.div`
-  position: relative;
-  width: 100vh;
-  width: 100%;
-  font-family: Montserrat;
-  background-color: rgba(0, 0, 0, 0.2);
-`;
+// const SectionContact = styled.div`
+//   position: relative;
+//   height: 100vh;
+//   width: 100%;
+//   font-family: Montserrat;
+//   background-color: rgba(0, 0, 0, 0.2);
+// `;
 
 const ClipUpOne = styled.div`
   height: 100%;
@@ -53,7 +53,11 @@ const ClipUpOne = styled.div`
   clip-path: polygon(0 0, 100% 0, 93% 1.9%, 7.6% 1.9%);
   @media (min-width: 768px) {
     width: 80%;
-    clip-path: polygon(0 0, 100% 0, 93% 4.2%, 7.6% 4.3%);
+    clip-path: polygon(0 0, 100% 0, 93% 3.2%, 7.6% 3.3%);
+  }
+  @media (min-width: 1440px) {
+    width: 80%;
+    clip-path: polygon(0 0, 100% 0, 93% 4.3%, 7.6% 4.3%);
   }
 `;
 const ClipUp = styled.div`
@@ -68,7 +72,7 @@ const ClipUp = styled.div`
   clip-path: polygon(0 0, 100% 0, 93% 4.8%, 7.6% 4.8%);
   @media (min-width: 768px) {
     width: 80%;
-    clip-path: polygon(0 0, 100% 0, 93% 6.5%, 7.6% 6.5%);
+    clip-path: polygon(0 0, 100% 0, 93% 4.5%, 7.6% 4.5%);
   }
 `;
 const ClipDownOne = styled.p`
@@ -80,9 +84,9 @@ const ClipDownOne = styled.p`
   height: 100%;
   width: 100%;
   background-color: rgb(0, 185, 255);
-  clip-path: polygon(7.6% 98.8%, 92.4% 98.8%, 100% 100%, 0% 100%);
+  clip-path: polygon(4.6% 98.8%, 95.4% 98.8%, 100% 100%, 0% 100%);
   @media (min-width: 660px) {
-    clip-path: polygon(4.4% 96.8%, 95.6% 96.8%, 100% 100%, 0% 100%);
+    /* clip-path: polygon(4.4% 96.8%, 95.6% 96.8%, 100% 100%, 0% 100%); */
   }
 `;
 const ClipDown = styled.p`
@@ -635,9 +639,9 @@ const Main = ({ open, current }) => {
           <CompanyCarousel />
           <ClipDown />
         </SectionThree>
-        <SectionContact id='Kontakt'>
-          <Contact />
-        </SectionContact>
+        {/* <SectionContact id='Kontakt'> */}
+        <Contact />
+        {/* </SectionContact> */}
       </main>
     </>
   );

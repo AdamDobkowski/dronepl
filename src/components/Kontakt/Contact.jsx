@@ -12,7 +12,12 @@ const ContainerContact = styled.div`
   width: 100%;
   padding: 0;
   margin: 0;
+  /* font-family: Montserrat; */
+  position: relative;
+  /* height: 100vh; */
+  width: 100%;
   font-family: Montserrat;
+  background-color: rgba(0, 0, 0, 0.2);
 `;
 const ContainerInfo = styled.div`
   div {
@@ -29,7 +34,7 @@ const WrapContainer = styled.div`
   font-family: Montserrat;
   position: relative;
   width: 80%;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -40,7 +45,7 @@ const WrapContainer = styled.div`
   /* margin: 0 auto; */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -65%);
+  transform: translate(-50%, -50%);
   @media (min-width: 768px) {
     display: flex;
     justify-content: center;
