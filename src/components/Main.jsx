@@ -32,13 +32,13 @@ const SectionThree = styled.div`
   font-family: Montserrat;
   background-color: rgba(0, 0, 0, 0.2);
 `;
-// const SectionContact = styled.div`
-//   position: relative;
-//   height: 100vh;
-//   width: 100%;
-//   font-family: Montserrat;
-//   background-color: rgba(0, 0, 0, 0.2);
-// `;
+const SectionParalax = styled.div`
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  font-family: Montserrat;
+  background-color: rgba(0, 0, 0, 0.2);
+`;
 
 const ClipUpOne = styled.div`
   height: 100%;
@@ -84,9 +84,9 @@ const ClipDownOne = styled.p`
   height: 100%;
   width: 100%;
   background-color: rgb(0, 185, 255);
-  clip-path: polygon(4.6% 98.8%, 95.4% 98.8%, 100% 100%, 0% 100%);
+  clip-path: polygon(4.6% 98.1%, 95.4% 98.1%, 100% 100%, 0% 100%);
   @media (min-width: 660px) {
-    /* clip-path: polygon(4.4% 96.8%, 95.6% 96.8%, 100% 100%, 0% 100%); */
+    clip-path: polygon(4.4% 97.8%, 95.6% 97.8%, 100% 100%, 0% 100%);
   }
 `;
 const ClipDown = styled.p`
@@ -598,7 +598,9 @@ const Main = ({ open, current }) => {
           </WrapperSection>
           <ClipDownOne />
         </Section>
-        <Counter jp={pxl} />
+        <SectionParalax>
+          <Counter jp={pxl} />
+        </SectionParalax>
         <SectionThree id='Works'>
           <ClipUp />
           <WrapperSection ref={scrollRef}>
