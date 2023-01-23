@@ -140,8 +140,8 @@ const Hero = () => {
       <ContainerView>
         <video
           src={video}
-          controls='true'
-          playsinline
+          controls={true}
+          playsInline
           autoPlay
           loop
           muted
