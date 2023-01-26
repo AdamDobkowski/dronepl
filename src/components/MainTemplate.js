@@ -7,7 +7,7 @@ import { theme } from '../assets/style/theme';
 import Navigation from './Navigation/Navigation';
 import { useState } from 'react';
 
-import Main from './Main';
+import Main from './Main/Main';
 
 function MainTemplate({ children }) {
   const [open, isOpen] = useState(false);

@@ -15,9 +15,18 @@ const ContainerSlider = styled.div`
   background: transparent;*/
   /* background: transparent; */
   position: relative;
-  height: 250px;
+  height: 200px;
   max-width: 80%;
   z-index: -1;
+  @media (min-width: 500px) {
+    height: 200px;
+  }
+  @media (min-width: 374px) {
+    height: 200px;
+  }
+  @media (min-width: 768px) {
+    height: 250px;
+  }
 
   /* height: 30%; */
 `;
@@ -61,10 +70,10 @@ const Imgi = styled.div`
 
     z-index: 999;
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
     background-size: cover;
     @media (min-width: 500px) {
-      width: 80%;
+      width: 90%;
     }
     @media (min-width: 768px) {
       background-size: contain;

@@ -3,6 +3,9 @@ import React from 'react';
 import { FaPhotoVideo } from 'react-icons/fa';
 import { BsStarHalf } from 'react-icons/bs';
 import { HiOutlineOfficeBuilding } from 'react-icons/hi';
+import { GiField } from 'react-icons/gi';
+import { MdOutlineCameraIndoor } from 'react-icons/md';
+import { IoCarSport } from 'react-icons/io5';
 import done1 from './imges/done1.jpg';
 import done2 from './imges/done2.jpg';
 import done3 from './imges/done3.jpg';
@@ -41,34 +44,34 @@ export const specs = [
     id: 3,
     icon: <HiOutlineOfficeBuilding style={{ fontSize: '40px' }} />,
     // icon: 'DOM3',
-    title: 'Nieruchomości3',
+    title: 'Budynki',
     desc: 'Z podniebnej perspektywy każda nieruchomość wygląda atrakcyjniej. Dzięki fotografiom i wideo z drona lepiej zaprezentujesz swoją firmę lub dużo szybciej sprzedaż nieruchomość. Oprócz klasycznych zdjęć i filmów reklamowych, wykonuję też timelapsy i Panoramy sferyczne 360 stopni.',
 
     btn: 'KONTAKT',
   },
   {
     id: 4,
-    icon: <FaPhotoVideo style={{ fontSize: '40px' }} />,
+    icon: <IoCarSport style={{ fontSize: '40px' }} />,
     // icon: 'DOM4',
-    title: 'Nieruchomości4',
+    title: 'Samochody',
     desc: 'Uchwycenie odpowiednich ujęć to dopiero połowa drogi do celu. Realizuję projekty od nagrania, po gotowy produkt w postaci filmu.',
 
     btn: 'KONTAKT',
   },
   {
     id: 5,
-    icon: <FaPhotoVideo style={{ fontSize: '40px' }} />,
+    icon: <MdOutlineCameraIndoor style={{ fontSize: '40px' }} />,
     // icon: 'DOM4',
-    title: 'Nieruchomości4',
+    title: 'Wnętrza',
     desc: 'Uchwycenie odpowiednich ujęć to dopiero połowa drogi do celu. Realizuję projekty od nagrania, po gotowy produkt w postaci filmu.',
 
     btn: 'KONTAKT',
   },
   {
     id: 6,
-    icon: <FaPhotoVideo style={{ fontSize: '40px' }} />,
+    icon: <GiField style={{ fontSize: '40px' }} />,
     // icon: 'DOM4',
-    title: 'Nieruchomości4',
+    title: 'Nieruchomości',
     desc: 'Uchwycenie odpowiednich ujęć to dopiero połowa drogi do celu. Realizuję projekty od nagrania, po gotowy produkt w postaci filmu.',
 
     btn: 'KONTAKT',

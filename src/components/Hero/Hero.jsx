@@ -6,7 +6,8 @@ import React, { useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import styled from 'styled-components';
-import video from '../../assets/imges/dron.mp4';
+// import video from '../../assets/imges/dron.mp4';
+import video from '../../assets/imges/showReel.mp4';
 import imgHero from '../../assets/imges/hero.jpg';
 import { motion } from 'framer-motion';
 
